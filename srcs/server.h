@@ -19,11 +19,6 @@ typedef struct  s_server
 {
 		char	buff;
 		int		i;
-		int		current_i;
-		int		size;
-		int		init;
-		int		print;
-		int		total;
 }               t_server;
 t_server server;
 #endif

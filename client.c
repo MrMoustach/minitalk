@@ -19,9 +19,21 @@ int	main(int ac, char *av[])
 	int	i;
 	int	j;
 	int c;
+	int	interval;
 
-	pid = atoi(av[1]);
 	i = 0;
+	if (ac <= 1)
+	{
+		write (1, "Please provide a valid server pid\n", 34);
+		exit(0);
+	}
+	if (ac <= 2)
+	{
+		write (1, "Please provide a message\n", 25);
+		exit(0);
+	}
+	// TODO : change this
+	pid = atoi(av[1]);
 	i = 0;
 	while (i < ft_strlen(av[2]))
 	{
@@ -30,11 +42,12 @@ int	main(int ac, char *av[])
 		while (j-- > 0)
 		{
 			int k = c >> j;
+			interval = (unsigned int)(&k) % 300 + 100;
 			if (k & 1)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(150);
+			usleep(interval);
 		}
 		i++;
 	}

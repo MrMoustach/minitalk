@@ -84,20 +84,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-
-// TODO: remove this
-
-void convert(int n)
-{
-  int c,k;
-  for (c = 7; c >= 0; c--)
-    {
-      k = n >> c;
-
-      if (k & 1)
-        printf("1");
-      else
-        printf("0");
-    }
-}

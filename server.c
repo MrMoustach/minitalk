@@ -32,14 +32,11 @@ void    handle_sig(int sig)
 int	main(void)
 {
     server.i = 0;
-    server.current_i = 0;
-    server.init = 0;
-    server.print = 0;
-    server.total = 0;
     server.buff = 0;
 	signal(SIGUSR1, handle_sig);
 	signal(SIGUSR2, handle_sig);
 	write (1, ft_itoa(getpid()), 6);
+    write (1, "\n", 1);
     while (1)
         pause();
     return 0;
