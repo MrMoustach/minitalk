@@ -6,7 +6,7 @@
 /*   By: iharchi <iharchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 11:59:46 by iharchi           #+#    #+#             */
-/*   Updated: 2021/06/08 12:00:15 by iharchi          ###   ########.fr       */
+/*   Updated: 2021/06/08 14:50:16 by iharchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,14 @@ char			*ft_itoa(int n)
 	if (signe)
 		*ret = '-';
 	return (ret);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (*(s + i) != '\0')
+		i++;
+	return (i);
 }
