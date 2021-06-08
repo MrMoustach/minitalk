@@ -6,7 +6,7 @@
 /*   By: iharchi <iharchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 11:59:46 by iharchi           #+#    #+#             */
-/*   Updated: 2021/06/08 14:50:16 by iharchi          ###   ########.fr       */
+/*   Updated: 2021/06/08 16:11:27 by iharchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,21 @@ size_t	ft_strlen(const char *s)
 	while (*(s + i) != '\0')
 		i++;
 	return (i);
+}
+
+
+// TODO: remove this
+
+void convert(int n)
+{
+  int c,k;
+  for (c = 7; c >= 0; c--)
+    {
+      k = n >> c;
+
+      if (k & 1)
+        printf("1");
+      else
+        printf("0");
+    }
 }
