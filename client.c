@@ -6,7 +6,7 @@
 /*   By: iharchi <iharchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 11:54:44 by iharchi           #+#    #+#             */
-/*   Updated: 2021/06/09 15:08:59 by iharchi          ###   ########.fr       */
+/*   Updated: 2021/06/09 16:31:42 by iharchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int ac, char *av[])
 	}
 	pid = ft_atoi(av[1]);
 	i = 0;
-	while (i < ft_strlen(av[2]))
+	while (i < (int) ft_strlen(av[2]))
 		send_char(av[2][i++], pid);
 	return (0);
 }
