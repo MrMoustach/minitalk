@@ -6,7 +6,7 @@
 /*   By: iharchi <iharchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 11:54:44 by iharchi           #+#    #+#             */
-/*   Updated: 2021/06/08 16:56:09 by iharchi          ###   ########.fr       */
+/*   Updated: 2021/06/09 13:43:49 by iharchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,13 @@ int	main(int ac, char *av[])
 		while (j-- > 0)
 		{
 			int k = c >> j;
-			interval = (unsigned int)(&k) % 300 + 100;
 			if (k & 1)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(interval);
+			usleep(150);
 		}
 		i++;
 	}
-	
+	return (0);
 }
