@@ -6,7 +6,7 @@
 /*   By: iharchi <iharchi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 12:00:17 by iharchi           #+#    #+#             */
-/*   Updated: 2021/06/09 13:19:42 by iharchi          ###   ########.fr       */
+/*   Updated: 2021/06/09 14:55:03 by iharchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 # include <unistd.h>
 # include <stdio.h>
 void	ft_putnbr_fd(int n, int fd);
-size_t          ft_strlen(const char *s);
-void convert(int n);
+size_t	ft_strlen(const char *s);
+int		ft_atoi(const char *str);
 #endif
